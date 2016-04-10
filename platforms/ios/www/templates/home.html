@@ -1,0 +1,21 @@
+<ion-view title="爱词典" id = "homepage" > 
+      <ion-header-bar class="bar-positive" align-title="center" >
+        <h1 class="title">爱典</h1>
+      </ion-header-bar>  
+      <ion-header-bar id="search-bar" class="bar-light bar-subheader">
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper" id="search-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="pinyin/汉字/en/fr/code" ng-model="query" ng-change="search()">
+          </label>
+        </div>
+      </ion-header-bar> 
+      <ion-content id="content" push-search>
+          <ion-list>
+            <ion-item ng-repeat="item in traductions"  ui-sref='app.home_details({rowid: item.rowid,type:"traduction"})'>
+              {{item.codeCn + " " + item.cn + " " + item.codePinyin + " " + item.pinyin + " " + item.codeEn + " " + item.en + " " + item.codeFr+ " " + item.fr}}  
+            </ion-item>
+          </ion-list> 
+      </ion-content>
+</ion-view>
+      

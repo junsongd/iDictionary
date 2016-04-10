@@ -1,0 +1,20 @@
+<ion-view title="收藏夹" id = "favoritepage">
+      <ion-header-bar class="bar-positive" align-title="center" >
+        <h1 class="title">收藏夹</h1>
+      </ion-header-bar>   
+      <ion-content>
+          <ion-list  show-delete="shouldShowDelete"
+          show-reorder="shouldShowReorder"
+          can-swipe="listCanSwipe">
+            <ion-item ng-repeat="item in favorites"  ui-sref='app.home_details({rowid: item.rowid,type:"favorite"})'>
+              {{item.codeCn + " " + item.cn + " " + item.codePinyin + " " + item.pinyin + " " + item.codeEn + " " + item.en + " " + item.codeFr+ " " + item.fr}} 
+              <ion-option-button class="button-assertive"
+                                 ng-click="delete($index,item)">
+                删除
+              </ion-option-button> 
+            </ion-item>
+
+          </ion-list>
+      </ion-content>
+</ion-view>
+      

@@ -1,0 +1,28 @@
+ <ion-view title="详细翻译">  
+   <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-title>
+      详细翻译
+    </ion-nav-title>
+  </ion-nav-bar>
+     <ion-content>
+       <div class="card" ng-class="{ favoirteSelected: isActive(traduction.isFavorite)}">
+		    <div class="item item-text-wrap"  >
+		     <div class = "code" >{{traduction.codeCn}} </br></div>
+         <div>{{traduction.cn}}</br></div>
+         <div class = "code">{{traduction.codePinyin}}</br></div>
+         <div>{{traduction.pinyin}}</br></div>
+         <div class = "code" ng-show = "traduction.codeEn">{{traduction.codeEn}}</br></div>
+         <div>{{traduction.en}}</br></div>
+         <div class = "code" ng-show = "traduction.codeFr">{{traduction.codeFr}}</br></div>
+         <div>{{traduction.fr}}</br></div>
+		    </div>
+        <a class="button button-icon icon ion-android-favorite-outline"   ng-class="{ favoirteSelected: isActive(traduction.isFavorite)}"  ng-click = "setFavoris(traduction); "></a>
+        <a class="button button-icon icon ion-ios-upload-outline" ng-click ="shareText(traduction);"></a>
+        
+		</div>
+    </ion-content>
+</ion-view>
+
+ 

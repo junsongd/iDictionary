@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+.code{
+  font-weight: bold;
+}
+.favoirteSelected{
+  color: red;
+}
+a.button.button-icon.icon.ion-android-favorite-outline.favoirteSelected{
+   color: red;
+}
+#favoritepage .item-content,#homepage .item-content{ 
+   white-space: normal  !important;
+   font-size: 9px;
+   padding: 8px;
+}
+
+#favoritepage .item-content { 
+  min-height: 50px;
+}
